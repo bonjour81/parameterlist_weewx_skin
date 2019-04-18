@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Parameter list</h1>
+    <h1>Parameter list</h1><p>last update $current.dateTime</p>
     <p>Find here several labels you can use in your own skins</p>
     <table>
         <thead>
@@ -69,7 +69,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -110,7 +110,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -145,7 +145,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -452,7 +452,7 @@
         </tbody>
     </table>
 
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -577,7 +577,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -703,7 +703,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -829,7 +829,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -954,7 +954,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -1080,7 +1080,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -1207,7 +1207,7 @@
 
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -1332,7 +1332,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -1458,7 +1458,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -1585,7 +1585,7 @@
 
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
@@ -1610,46 +1610,94 @@
                 <td>\$year.rain.sum</td>
                 <td>$year.rain.sum</td>
             </tr>
-
+            <tr>
+            <td colspan=2>With a \#for loop:</td>
+            </tr>
+	    #for $month in $year.months
+            <tr>
+            <td>\$month.dateTime.format("%B")<br>\$month.rain.sum</td>
+            <td>$month.dateTime.format("%B"):<br>$month.rain.sum</td>
+            </tr>
+            #end for
         </tbody>
     </table>
-    </br>
+    <br>
 
     <table>
         <thead>
             <tr>
-                <th colspan="2">Almanach</th>
+                <th colspan="6">Every month min/max on the year</th>
             </tr>
         </thead>
         <tbody>
 	#for $month in $year.months
         <tr>
-        <td>\$month.dateTime.format("%B"):</br>\$month.outTemp.min / \$month.outTemp.max</td>
-        <td>$month.dateTime.format("%B"):</br>$month.outTemp.min / $month.outTemp.max</td>
+        <td>\$month.dateTime.format("%B"):<br>\$month.outTemp.min / \$month.outTemp.max</td>
+        <td>$month.dateTime.format("%B"):<br>$month.outTemp.min / $month.outTemp.max</td>
+        <td>\$month.dateTime.format("%B"):<br>\$month.outHumidity.min / \$month.Humidity.max</td>
+        <td>$month.dateTime.format("%B"):<br>$month.outHumidity.min / $month.outHumidity.max</td>
+        <td>\$month.dateTime.format("%B"):<br>\$month.barometer.min / \$month.Humidity.max</td>
+        <td>$month.dateTime.format("%B"):<br>$month.barometer.min / $month.barometer.max</td>
+
         </tr>
         #end for
 
         </tbody>
     </table>
+    <br>
+<table>
+        <thead>
+            <tr>
+                <th colspan="6">Every month min/max on the year</th>
+            </tr>
+        </thead>
+        <tbody>
+        #for $month in $year.months
+        <tr>
+        <td>\$month.dateTime.format("%B"):<br>\$month.outTemp.min / \$month.outTemp.max</td>
+        <td>$month.dateTime.format("%B"):<br>$month.outTemp.min / $month.outTemp.max</td>
+        <td>\$month.dateTime.format("%B"):<br>\$month.outHumidity.min / \$month.Humidity.max</td>
+        <td>$month.dateTime.format("%B"):<br>$month.outHumidity.min / $month.outHumidity.max</td>
+        <td>\$month.dateTime.format("%B"):<br>\$month.barometer.min / \$month.Humidity.max</td>
+        <td>$month.dateTime.format("%B"):<br>$month.barometer.min / $month.barometer.max</td>
 
+        </tr>
+        #end for
 
-
+        </tbody>
+    </table>
+    <br>
 
 
     <table>
         <thead>
             <tr>
-                <th colspan="2">Almanach</th>
+                <th colspan="2">*</th>
             </tr>
         </thead>
         <tbody>
-
+        <tr>
+        <td>\$month.dateTime.format("%B"):<br>\$month.windSpeed.min / \$month.windSpeed.max</td>
+        <td>$month.dateTime.format("%B"):<br>$month.windSpeed.min / $month.windSpeed.max</td>
+        </tr>
+        <tr>
+        <td>\$month.dateTime.format("%B"):<br>\$month.windGust.min / \$month.windGust.max</td>
+        <td>$month.dateTime.format("%B"):<br>$month.windGust.min / $month.windGust.max</td>
+        </tr>
+        <tr>
+        <td>\$month.dateTime.format("%B"):<br>\$month.dewpoint.min / \$month.dewpoint.max</td>
+        <td>$month.dateTime.format("%B"):<br>$month.dewpoint.min / $month.dewpoint.max</td>
+        </tr>
         </tbody>
     </table>
 
 
-    </br>
-    <h3>Developped by bonjour81, source code on ...</h3>
+    <br>
+    <h3>Developped by bonjour81, source code on <a href="https://github.com/bonjour81/parameterlist_weewx_skin">https://github.com/bonjour81/parameterlist_weewx_skin</a></h3>
+    <a href="http://validator.w3.org/check?uri=referer"><img src="valid_html5_blue.png" alt="Html5 valide!"></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="valid_css3_blue.png" alt="CSS Valide !"></a>
+    <br>
+    <div class="a"><a href="https://venturas.org/badges">Bagdes from  João Ventura</a></div>
 </body>
 
 </html>
