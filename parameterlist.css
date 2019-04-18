@@ -1,4 +1,3 @@
-@font-family: 'Ubuntu Mono',monospace;
 body, p, h1, h3 {
 font-family:'Ubuntu Mono', monospace;
 }
@@ -28,4 +27,8 @@ font-family:inherit;
 
 table tr:nth-child(odd) {
 background-color:#daecf6;
+}
+
+div.a {
+font-size: 0.8em;
 }
