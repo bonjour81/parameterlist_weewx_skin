@@ -24,7 +24,8 @@ class ExfoliationInstaller(ExtensionInstaller):
             files=[('skins/parameterlist',['skins/parameterlist/parameterlist.html.tmpl',
                                           'skins/parameterlist/parameterlist.css',
                                           'skins/parameterlist/skin.conf',
-                                          ]
+                                          'skins/parameterlist/valid_css3_blue.png',
+                                          'skins/parameterlist/valid_html5_blue.png',
                    ),
                   ]
         )
